@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'zothique_demo';
+    src: url('Fonts/zod_____-webfont.woff2') format('woff2'),
+         url('Fonts/zod_____-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sans_light';
+    src: url('Fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('Fonts/opensans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+  display: flex;
+  background-color: #4da6ff;
+  flex-direction: column;
+}
+
+body {
+  background-color: #99ccff;
+  font-family: 'open_sans_light';
+}
+
+#title {
+  margin: 0 auto;
+  order: 1;
+}
+
+h1 {
+  font-family: 'zothique_demo';
+  font-size: 64px;
+  font-weight: normal;
+}
+
+#navbar {
+  order: 2;
+}
+
+#navbar * {
+  margin-bottom: 15px;
+}
+
+#navbar :nth-child(5) {
+  margin-bottom: 0px;
+}
+
+.spacer {
+  display: none;
+}
+
+nav {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+}
+
+a {
+  color: #001a00;
+  text-decoration: underline;
+  flex: 1;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+}
+
+.images > img {
+  border-radius: 5px;
+  box-shadow: 5px 10px 5px black;
+}
+
+@media screen and (min-width:768px){
+  nav {
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-bottom: auto;
+  }
+  #navbar {
+    order: 1;
+  }
+  #navbar * {
+    margin-bottom: auto;
+    margin-left: 15px;
+  }
+  #title {
+    order: 2;
+  }
+ .spacer {
+    display: block;
+    margin-top: -6px;
+    font-size: 24px;
+  }
+  a {
+    flex: 0;
+  }
+  .images {
+    flex-direction: row;
+  }
+}
+
+a:hover {
+  color: #e6ffe6;
+  text-decoration: none;
+}
+
+#contactFormContainer {
+  border: 8px solid #4da6ff;
+  padding: 10px;
+}
+
+#contactFormContainer * {
+  text-align: center;
+}
+
+form > input {
+  margin: 8px;
+  width: 75%;
+  padding: 2px;
+}
+
+#contactFormContainer > div > textarea {
+  margin: 8px;
+  width: 75%;
+  height: 120px;
+  padding: 2px;
+}
+
+#submitMessageButton > input[type=submit] {
+  padding: 5px 10px;
+  background: #4da6ff;
+  font-size: 16px;
+}
